@@ -1,9 +1,11 @@
 
+# Creating an index.html, Dockerfile and Pushing to Docker Hub
 
+In this guide, Ill will show you how to create a  index.html file in your local machine, build a Docker image with it, and push the image to Docker Hub.
 
-### Add profile to index.html on local machine:
+### Create the index.html file on local machine:
 
-- Open your gitbash terminal, naviagte to the folder you have created. Now create a index.html file. 
+- Open your gitbash terminal, Create a new file named index.html.
 
     ```bash
     nano index.html
@@ -13,6 +15,8 @@
 
    ![Alt text](<images/Screenshot 2023-10-30 132620.png>)
 
+### Create a Dockerfile
+
 - In the same folder where your index.html is, create a Dockerfile
 
     ```
@@ -21,28 +25,28 @@
     nano Dockerfile
     ```
 
-- In the Dockerfile, copy the following script, save and exit the file. 
+- In the Dockerfile, add the following content- save and exit.
   
     ![Alt text](images/dockerfile.png)
 
 ### Build the Docker Image
 
-- In the terminal, navigate to the directory containing your Dockerfile and index.html, and run:
+- In the terminal, navigate to the directory containing your Dockerfile and index.html, and run the command to build your docker image:
 
     ```
     docker build -t your_username/image_name:tag .
     ```
     ![Alt text](images/dockerbuild.png)
 
-### Push to Docker Hub
+### Tag the image
 
-Before pushing the image, you need to **tag it** with your Docker Hub username and the repository name. 
+Before pushing the image, you need to **tag it** with your Docker Hub username and a desired repository name. 
 
 ```bash
 docker tag tech254-prismika pxxmie/tech254-prismika:v1
 ```
 
-Push the Image:
+### Push the Image to Docker Hub
 
 This command will upload your image to Docker Hub.
 ```
@@ -55,7 +59,7 @@ After the push is successful, you should be able to see your image on Docker Hub
 
 ![Alt text](images/on_hub.png)
 
-### Running your image from gitbash 
+### Pulling the Docker Image
 
 Copy the pull command from your docker hub into your terminal: 
 
@@ -65,14 +69,17 @@ docker pull pxxmie/tech254-prismika:v1
 
 ![Alt text](images/docker_pull.png)
 
-We've mapped port 100 on your local machine to port 80 inside the container.
+### Running a Container from the Pulled Image
 
-You can now access your Nginx server with new image by navigating to http://localhost:100 in your web browser.
+Map port 100 on your local machine to port 80 inside the container.
 
 ```bash 
 $ docker run -d -p 100:80 pxxmie/tech254-prismika:v1
 8429e265982acaa4c12c903744db7b4cad08396dd37aaaf9ca491a8e33bcb5e3
 ```
+
+You can now access your Nginx server with new image by navigating to http://localhost:100 in your web browser.
+
 ![Alt text](<images/Screenshot 2023-10-30 132620.png>)
 
 ![Alt text](<images/Screenshot 2023-10-30 132631.png>)
