@@ -13,7 +13,7 @@ In this guide, Ill will show you how to create a  index.html file in your local 
 
 - Edit the index.html file to add your docker profile, save and exit the file.
 
-   ![Alt text](<images/Screenshot 2023-10-30 132620.png>)
+   ![Alt text](images/htmlfile.png)
 
 ### Create a Dockerfile
 
