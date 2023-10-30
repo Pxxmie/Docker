@@ -23,7 +23,7 @@
 
 - In the Dockerfile, copy the following script, save and exit the file. 
   
-    ![Alt text](dockerfile.png)
+    ![Alt text](images/dockerfile.png)
 
 ### Build the Docker Image
 
