@@ -1,5 +1,16 @@
 ## Setting up Docker
 
+### Download Docker for Windows (link)
+
+[Download for Windows](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module&_gl=1*40czeb*_ga*MjEyNDk2NTk3MS4xNjk4NjU5MTcw*_ga_XJWPQMJYHQ*MTY5ODY3NDM1Ni41LjEuMTY5ODY3NjI1Ny41My4wLjA.)
+
+Open your gitbash terminal and run the following command to make sure Docker has been downloaded. 
+
+```bash
+$ docker --version
+Docker version 24.0.6, build ed223bc
+```
+
 ### Running Nginx in a Docker Container
 
 ```bash
