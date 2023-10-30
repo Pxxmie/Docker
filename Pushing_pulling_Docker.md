@@ -5,38 +5,39 @@ In this guide, Ill will show you how to create a  index.html file in your local 
 
 ### Create the index.html file on local machine:
 
-- Open your gitbash terminal, Create a new file named index.html.
+  Open your gitbash terminal, Create a new file named index.html.
 
-    ```bash
-    nano index.html
-    ```
+```bash
+ nano index.html
+```
 
-- Edit the index.html file to add your docker profile, save and exit the file.
+  Edit the index.html file to add your docker profile, save and exit the file.
 
    ![Alt text](images/htmlfile.png)
 
 ### Create a Dockerfile
 
-- In the same folder where your index.html is, create a Dockerfile
+  In the same folder where your index.html is, create a Dockerfile
 
-    ```
-    touch Dockerfile
+```
+touch Dockerfile
 
-    nano Dockerfile
-    ```
+nano Dockerfile
+```
 
-- In the Dockerfile, add the following content- save and exit.
+In the Dockerfile, add the following content- save and exit.
   
     ![Alt text](images/dockerfile.png)
 
 ### Build the Docker Image
 
-- In the terminal, navigate to the directory containing your Dockerfile and index.html, and run the command to build your docker image:
+In the terminal, navigate to the directory containing your Dockerfile and index.html, and run the command to build your docker image:
 
-    ```
-    docker build -t your_username/image_name:tag .
-    ```
-    ![Alt text](images/dockerbuild.png)
+```
+docker build -t your_username/image_name:tag .
+```
+
+![Alt text](images/dockerbuild.png)
 
 ### Tag the image
 
