@@ -27,7 +27,7 @@ nano Dockerfile
 
 In the Dockerfile, add the following content- save and exit.
   
-    ![Alt text](images/dockerfile.png)
+![Alt text](images/dockerfile.png)
 
 ### Build the Docker Image
 
