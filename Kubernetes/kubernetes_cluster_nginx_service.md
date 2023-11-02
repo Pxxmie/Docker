@@ -1,4 +1,4 @@
-# Kubernetes Deployment- Creating a Service 
+# Kubernetes Cluster- Creating a Service for Nginx deployment
 
 Now, that we have created our deployment, we want to access it from outside our cluster and from the internet, therefore we need to create a Service for our deployment. 
 

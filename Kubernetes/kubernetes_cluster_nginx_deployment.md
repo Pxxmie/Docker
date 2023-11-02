@@ -1,4 +1,4 @@
-# Kubernetes Deployment 
+# Kubernetes Cluster- Nginx Deployment 
 
 ### Step 1: Create YAML file (Deployment)
 
