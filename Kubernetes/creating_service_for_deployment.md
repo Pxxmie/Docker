@@ -9,7 +9,7 @@ In the same folder, where we have our deployment YAML file, we will now need to 
 ```
 nano nginx-service.yml
 ```
-![Alt text](images/service_yml.png)
+![Alt text](../images/sercvice-ymlll.png)
 
 
 ```bash
@@ -25,10 +25,9 @@ spec:
     - protocol: TCP  # Specifies the protocol for the ports (TCP in this case)
       port: 80  # Port to expose on the Service
       targetPort: 80  # Port that the Nginx pods are listening on
+  type:nodePort 
 
-  type: LoadBalancer  # Specifies the type of the Service (LoadBalancer in this case)
 ```
-
 ## Step 2: Create Service 
 
 Now we want to instruct Kubernetes to create a Service based on the configuration defined in our service YAML file. 
@@ -45,10 +44,10 @@ kubectl get services
 
 Output:
 
-![Alt text](images/servicess.png)
+![Alt text](../images/servicesss.png)
 
 ## Step 3: Access our Deployment 
 
-Once the Service is created and successfully provisioned, we can access it on our local host. 
+Once the Service is created and successfully provisioned, we can access it on our local host followed by the port specified. 
 
-![Alt text](images/nginx.png)
+![Alt text](../images/losthostport.png)
