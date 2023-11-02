@@ -9,7 +9,7 @@ In the same folder, where we have our deployment YAML file, we will now need to 
 ```
 nano nginx-service.yml
 ```
-![Alt text](Kubernetes/images/service_yml.png)
+![Alt text](images/service_yml.png)
 
 
 ```bash
@@ -45,10 +45,10 @@ kubectl get services
 
 Output:
 
-![Alt text](Kubernetes/images/servicess.png)
+![Alt text](images/servicess.png)
 
 ## Step 3: Access our Deployment 
 
 Once the Service is created and successfully provisioned, we can access it on our local host. 
 
-![Alt text](Kubernetes/images/nginx.png)
+![Alt text](images/nginx.png)
