@@ -34,3 +34,5 @@ If your applications are not containerised, then Kubernetes may not provide sign
 
 Kubernetes Deployment is a resource object in Kubernetes that manages a set of identical pods or replicas. 
 
+![Alt text](<Screenshot 2023-11-02 101209.png>)
+
