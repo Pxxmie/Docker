@@ -1,0 +1,14 @@
+apiVersion: v1  # Specifies the API version for the Kubernetes resource
+kind: Service  # Defines that you're creating a Service object
+metadata:
+  name: nginx-service  # Sets the name of the Service
+
+spec:
+  selector:
+    app: nginx  # Specifies the label selector for matching pods
+  ports:  # Defines the port configuration for the Service
+    - protocol: TCP  # Specifies the protocol for the ports (TCP in this case)
+      port: 80  # Port to expose on the Service
+      targetPort: 80  # Port that the Nginx pods are listening on
+
+  type: LoadBalancer  # Specifies the type of the Service (LoadBalancer in this case)
