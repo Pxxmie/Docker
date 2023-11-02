@@ -23,3 +23,14 @@ Kubernetes makes it easy to set up and update programs. You just tell it what yo
 
 Kubernetes can run on different cloud platforms, like Amazon Web Services (AWS), Google Cloud, Microsoft Azure, and others.
 
+### Why would you not use Kubernetes?
+
+**Highly Static Workloads**: If your workloads don't change much over time and you don't need auto-scaling or automated deployment features, a simpler solution might be suitable.
+
+**Lack of Containerised Workloads**:
+If your applications are not containerised, then Kubernetes may not provide significant benefits.
+
+## Kubernetes Deployment 
+
+Kubernetes Deployment is a resource object in Kubernetes that manages a set of identical pods or replicas. 
+
