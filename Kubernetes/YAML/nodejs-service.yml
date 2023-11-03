@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-app-service  # Set the name of the Service
+spec:
+  selector:
+    app: node-app  # Specify the label selector for matching pods
+  ports:
+    - protocol: TCP  # Specify the protocol for the ports (TCP in this case)
+      port: 3000
+      targetPort: 3000  # Port to expose on the Service
+  type: LoadBalancer  # Specify the type of the Service (LoadBalancer in this case)

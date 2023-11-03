@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app-deployment  # Set the name of the Deployment
+spec:
+  replicas: 3  # Ensure that there are always 3 replicas (pods) running
+  selector:
+    matchLabels:
+      app: node-app  # Select pods with the label 'app: node-app'
+  template:
+    metadata:
+      labels:
+        app: node-app  # Apply the label 'app: node-app' to pods created by this template
+    spec:
+      containers:
+        - name: node-app  # Name of the container
+          image: pxxmie/nodejs:latest  # Docker image location
+          ports:
+            - containerPort: 3000
+          # Port that the Node.js app is listening on
+          env:
+          - name: DB_HOST
+            value: mongodb://10.106.8.160:27017/posts
+          lifecycle:
+            postStart:
+              exec:
+                command: ["/bin/sh","-c", node seeds/seed.js]

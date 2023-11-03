@@ -9,6 +9,5 @@ spec:
   ports:  # Defines the port configuration for the Service
     - protocol: TCP  # Specifies the protocol for the ports (TCP in this case)
       port: 80  # Port to expose on the Service
-  type: NodePort
-
-
+      targetPort: 80  # Port that the Nginx pods are listening on
+  type: LoadBalancer  # Added to specify the type of the Service (NodePort in this case)

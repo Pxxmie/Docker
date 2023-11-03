@@ -8,18 +8,18 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: nginx # look for this label to match with k8 serv>
+      app: nginx # look for this label to match with k8 service
     # lets create a replica set of this with instances/pods
   replicas: 3 #3 pods
-    # template to use its label for k8 service to launch in >
+    # template to use its label for k8 service to launch in the browser
   template:
     metadata:
       labels:
-        app: nginx # This label connects to the service or a>
+        app: nginx # This label connects to the service or any other K8 components
   # Lets define the container spec
     spec:
       containers:
       - name: nginx
-        image: pxxmie/nginx-254:latest # use the image that >
+        image: pxxmie/nginx-254:latest # use the image that you built in your dockerhub
         ports:
         - containerPort: 80

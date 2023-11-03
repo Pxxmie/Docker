@@ -1,0 +1,25 @@
+# Use spaces not a tab
+
+apiVersion: apps/v1 # which API to use for deployment
+kind: Deployment # pod - service what kind of service/object
+
+metadata:
+  name: mongo-deployment # naming the deployment
+spec:
+  selector:
+    matchLabels:
+      app: mongo # look for this label to match with k8 service
+    # lets create a replica set of this with instances/pods
+  replicas: 3 #3 pods
+    # template to use its label for k8 service to launch in the browser
+  template:
+    metadata:
+      labels:
+        app: mongo # This label connects to the service or any other K8 components
+  # Lets define the container spec
+    spec:
+      containers:
+      - name: mongo
+        image: pxxmie/mongo:latest # use the image that you built in your dockerhub
+        ports:
+        - containerPort: 27017
