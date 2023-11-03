@@ -151,3 +151,5 @@ kubectl get deployments
 Now we can finally access our Mongodb on our browser by entering  http://localhost:3000/posts
 
 ![Alt text](posts.png)
+
+![Alt text](get_all.png)
